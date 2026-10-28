@@ -1,0 +1,20 @@
+{% extends 'trips/base.html' %}
+
+{% block title %}Login | TravelChecklist{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="card">
+      <h1>Iniciar sesión</h1>
+    
+      <p class="muted">
+        usa tu usuario y contraseña para entrar.
+      </p>
+      
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Iniciar sesión</button>
+    </div>
+  </section>
+{% endblock %}

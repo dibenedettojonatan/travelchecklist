@@ -1,0 +1,20 @@
+{% extends 'trips/base.html' %}
+
+{% block title %}Registro | TravelChecklist{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="card">
+      <h1>Crear cuenta</h1>
+    
+      <p class="muted">
+        Django ya trae un formulario de registro básico.
+      </p>
+      
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+    </div>
+  </section>
+{% endblock %}

@@ -118,6 +118,19 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
+# Si un usuario intenta entrar en una vista protegida sin iniciar sesión,
+# Django lo enviará a esta URL.
+LOGIN_URL = 'trips:login'
+
+# REDIRECCIONES
+
+# Después de iniciar sesión correctamente, Django lo redirigirá aquí.
+LOGIN_REDIRECT_URL = 'trips:home'
+
+# Después de cerrar sesión, el usuario volverá a esta página.
+LOGOUT_REDIRECT_URL = 'trips:home'
+
+
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
